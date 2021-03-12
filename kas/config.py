@@ -144,6 +144,12 @@ class Config:
         """
         return self._get_conf_header('local_conf_header')
 
+    def get_auto_conf_header(self):
+        """
+            Returns the auto.conf header
+        """
+        return self._get_conf_header('auto_conf_header')
+
     def get_machine(self):
         """
             Returns the machine
