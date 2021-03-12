@@ -213,6 +213,12 @@ CONFIGSCHEMA = {
                 'type': 'string',
             },
         },
+        'auto_conf_header': {
+            'type': 'object',
+            'additionalProperties': {
+                'type': 'string',
+            },
+        },
         'proxy_config': {
             'type': 'object',
             'additionalProperties': False,
