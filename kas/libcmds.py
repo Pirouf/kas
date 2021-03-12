@@ -260,9 +260,14 @@ class WriteBBConfig(Command):
                 fds.write('BBMULTICONFIG ?= "{}"\n'.format(
                     ctx.config.get_multiconfig()))
 
+        def _write_auto_conf(ctx):
+            filename = ctx.build_dir + '/conf/auto.conf'
+            with open(filename, 'w') as fds:
+                fds.write(ctx.config.get_auto_conf_header())
+
         _write_bblayers_conf(ctx)
         _write_local_conf(ctx)
-
+        _write_auto_conf(ctx)
 
 class ReposFetch(Command):
     """
